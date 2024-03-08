@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="favicon.ico">
+    <meta name="google-site-verification" content="W0rt5e-e7Vb6c9kIM_HBVdWt8pQKMCJZYToZnepbEGk">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description"
+        content="TextUtils is a word counter and a character counting utility which can be used to manipulate your text in the way you want. You can copy text, clear text, listen to text, convert text to uppercase from lowercase and lowercase to uppercase.">
+    <title>TextUtils - Word Counter and Converter - Home</title>
+    <link rel="stylesheet" href="/css/about.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fw-bolder" id="textrep">
+        <div class="container-fluid">
+            <a class="navbar-brand mx-3" href="#">TextUtils</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">About</a>
+                    </li>
+                </ul>
+                <div class="form-check form-switch mx-3 text-dark pe-auto" id="text-dark">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                        onclick="darklightmode()" style="cursor: pointer;">
+                    <label class="form-check-label" for="flexSwitchCheckChecked" id="darktolight"
+                        style="cursor: pointer;">Enable Dark
+                        Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="space" style="height: 5vh;"></div>
+
+    <div class="container text-dark" id="con1">
+        <h3 class="mb-3 my-3 ml-5 mt-5" style="
+    margin-left: 20px;
+">Try TextUtils - Word Counter, Character Counter, Remove
+            Extra
+            Spaces, Capitalize, Title Case, Sentence Case, On Copy</h3>
+        <div class="mb-3 my-3 container">
+            <textarea value="textBox" onkeypress="dis(this)" class="form-control bg-light text-dark" id="mybox"
+                rows="6">
+            </textarea>
+        </div>
+        <button onclick="ConvertUpCase()" class="btn btn-danger mx-1 my-1">ConvertUpCase
+        </button>
+        <button onclick="ConvertLowerCase()" class="btn btn-primary mx-1 my-1">ConvertLowerCase
+        </button>
+        <button onclick="ConvertCapitalize()" class="btn btn-secondary mx-1 my-1">ConvertCapitalize
+        </button>
+        <button onclick="Clear()" class="btn btn-info mx-1 my-1">Clear
+            Text</button>
+        <button onclick="Copy()" class="btn btn-warning mx-1 my-1">Copy text</button>
+        <button onclick="Paste()" class="btn btn-warning mx-1 my-1">Paste text</button>
+        <button onclick="RemoveExtraSpace()" class="btn btn-success mx-1 my-1">Remove Extra
+            Space</button>
+        <button onclick="Print()" class="btn btn-danger mx-1 my-1">Print
+            Text</button>
+        <button onclick="Speech()" class="btn btn-danger mx-1 my-1">Speech Text</button>
+        <button onclick="stopSpeechText()" class="btn btn-danger mx-1 my-1">Stop Speech Text</button>
+        <button onclick="Reverse()" class="btn btn-danger mx-1 my-1">Reverse Text</button>
+        <button onclick="TextUnicode()" class="btn btn-danger mx-1 my-1">Text To
+            Unicode</button>
+        <button onclick="textToSentenceCase()" class="btn btn-danger mx-1 my-1">textToSentenceCase</button>
+        <button onclick="RemoveSpecialCharacters()" class="btn btn-danger mx-1 my-1">Remove Special
+            Characters</button>
+        <button onclick="RemoveNumbers()" class="btn btn-danger mx-1 my-1">Remove Numbers</button>
+        <button onclick="DownloadText()" class="btn btn-danger mx-1 my-1">Download Text</button>
+        <button onclick="ExtractLink()" class="btn btn-danger mx-1 my-1">Extract Link</button>
+        <button onclick="searchGoogle()" class="btn btn-danger mx-1 my-1">Search Text With Google</button>
+        <div class="container">
+            <h2 class="my-4">Your Text Sammary</h2><b>
+                <p id="wordcar">0 Character and 0 Word</p>
+                <p id="sent">0 sentence and 0 Paragraph</p>
+                <p id="questionCount">0 questionCount</p>
+                <p id="minread">0 Minutes Read</p>
+            </b>
+            <h2 class="my-4">Preview</h2>
+            <p id="preview">Enter the your text to Preview it.</p>
+        </div>
+    </div>
+
+
+    <script src="/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
